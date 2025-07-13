@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - 待辦事項清單</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 我的待辦事項</h1>
+            <p class="subtitle">管理您的日常任務</p>
+        </header>
+
+        <div class="todo-input-section">
+            <div class="input-container">
+                <input type="text" id="todoInput" placeholder="輸入新的待辦事項..." maxlength="100">
+                <button id="addBtn" onclick="addTodo()">
+                    <span>➕</span>
+                    新增
+                </button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" onclick="filterTodos('all')">全部</button>
+            <button class="filter-btn" onclick="filterTodos('active')">進行中</button>
+            <button class="filter-btn" onclick="filterTodos('completed')">已完成</button>
+        </div>
+
+        <div class="todo-list-section">
+            <ul id="todoList" class="todo-list">
+                <!-- 待辦事項將動態添加到這裡 -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">📋</div>
+                <p>還沒有待辦事項</p>
+                <p class="empty-subtitle">開始添加您的第一個任務吧！</p>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stats">
+                <span id="totalCount">總計: 0</span>
+                <span id="activeCount">進行中: 0</span>
+                <span id="completedCount">已完成: 0</span>
+            </div>
+            <button id="clearCompleted" onclick="clearCompleted()" class="clear-btn">
+                清除已完成
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Todo List App - 使用 Rovo Dev CLI 建立</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
