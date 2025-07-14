@@ -7,6 +7,7 @@
 ```bash
 Invoke-WebRequest -Uri  https://acli.atlassian.com/windows/latest/acli_windows_amd64/acli.exe -OutFile acli.exe
 ```
+執行完目錄會產生一個 acli.exe 的檔案，這檔案很大，大概 60 MB，基本上不需要進 Git 版控，需要時再安裝就可以。
 
 ## 測試安裝是否成功
 ```bash
